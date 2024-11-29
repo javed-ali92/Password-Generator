@@ -91,7 +91,7 @@ export default function GeneratePassword() {
         <div className="mx-auto max-w-md space-y-6">
           {/* Header with title and description */}
           <div className="space-y-2 text-center">
-            <h1 className="text-3xl font-bold">Password Generator</h1>
+            <h1 className="text-3xl font-bold">🔐Password Generator🔐</h1>
             <p className="text-gray-500 dark:text-gray-400">
               Create a secure password with just a few clicks.
             </p>
@@ -99,7 +99,7 @@ export default function GeneratePassword() {
           {/* Main content area for password options and input */}
           <div className="space-y-4">
             {/* Input for password length */}
-            <div className="space-y-2">
+            <div className="space-y-2 ">
               <Label htmlFor="length">Password Length</Label>
               <Input
                 id="length"
@@ -108,7 +108,7 @@ export default function GeneratePassword() {
                 max="32"
                 value={length}
                 onChange={handleLengthChange}
-                className="w-full"
+              className="w-full bg-[#19d762]"
               />
             </div>
             {/* Checkboxes for character type inclusion */}
@@ -152,15 +152,15 @@ export default function GeneratePassword() {
               Generate Password
             </Button>
             {/* Display the generated password and button to copy */}
-            <div className="space-y-2">
+            <div className="space-y-2 ">
               <Label htmlFor="password">Generated Password</Label>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2  ">
                 <Input
                   id="password"
                   type="text"
                   value={password}
                   readOnly
-                  className="flex-1"
+                  className="flex-1 rounded-lg bg-[#19d762]"
                 />
                 <Button type="button" onClick={copyToClipboard}>
                   Copy to Clipboard
